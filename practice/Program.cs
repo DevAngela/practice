@@ -47,6 +47,11 @@ namespace practice
                 .Select(x => x.Name)
                 .ToList();
 
+            // 제일 상위 학생을 가져온다
+            var firstStudent = students
+                .OrderBy(x => x.Name)
+                .FirstOrDefault();
+
             // 학생들을 이름 순으로 정렬 하고, 학생의 이름, 나이만 골라서 익명 객체의 리스트로 반환
             var result3 = students
                 .OrderBy(x => x.Name)
@@ -92,10 +97,7 @@ namespace practice
                 .ToList();
 
 
-            // 제일 상위 학생을 가져온다
-            var firstStudent = students
-                .OrderBy(x => x.Name)
-                .FirstOrDefault();
+            
 
             var nums = new List<int> { 0, 1, 2 };
             foreach (var num in nums)
